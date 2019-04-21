@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('content')
@@ -30,7 +29,7 @@
                                             <div class="card-footer">
                                                 <p class="card-text">
 
-                                                    <a class="btn btn-primary float-right" href="#">
+                                                    <a class="btn btn-primary float-right" href="{{ route('questions.show', ['id' => $question->id]) }}">
                                                         View
                                                     </a>
                                                 </p>
@@ -38,11 +37,17 @@
                                         </div>
                                     </div>
                                 @empty
-                                    There are no questions to view, you can  create a question.
+                                    <a class="btn btn-primary" href="{{ route('questions.create')}}">
+                                        There are no questions to view, you can  create a question.
+                                    </a>
                                 @endforelse
 
 
                             </div>
+
+
+
+
 
                         </div>
                         <div class="card-footer">
@@ -55,16 +60,4 @@
                 </div>
             </div>
         </div>
-        @endsection
-        © 2019 GitHub, Inc.
-        Terms
-        Privacy
-        Security
-        Status
-        Help
-        Contact GitHub
-        Pricing
-        API
-        Training
-        Blog
-        About
+@endsection

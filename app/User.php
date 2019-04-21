@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
 
 /**
  * App\User
@@ -51,6 +52,7 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password', 'remember_token',
+
     ];
 
     /**
@@ -75,4 +77,6 @@ class User extends Authenticatable
     public function answers(){
         return $this->hasMany('App\Answer');
     }
+
+
 }
