@@ -44,17 +44,18 @@
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="18" parent="6" name="created_at">
+    <column id="18" parent="6" name="votes">
       <Position>5</Position>
-      <DataType>datetime|0s</DataType>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="19" parent="6" name="updated_at">
+    <column id="19" parent="6" name="created_at">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="20" parent="6" name="votes">
+    <column id="20" parent="6" name="updated_at">
       <Position>7</Position>
-      <DataType>int|0s</DataType>
+      <DataType>datetime|0s</DataType>
     </column>
     <key id="21" parent="6">
       <ColNames>id</ColNames>

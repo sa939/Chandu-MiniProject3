@@ -11,10 +11,6 @@ class Answer extends Model
     protected $fillable = ['body'];
 
 
-    public function votes(){
-        return $this->belongsTo('App\Votes');
-    }
-
 
     public function user(){
         return $this->belongsTo('App\User');
