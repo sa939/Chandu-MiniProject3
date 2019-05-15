@@ -8,6 +8,7 @@
                     <div class="card-header">Answer</div>
                     <div class="card-body">
                         {{$answer->body}}
+
                     </div>
                     <div class="card-footer">
                         {{ Form::open(['method'  => 'DELETE', 'route' => ['answers.destroy', $question, $answer->id]])}}

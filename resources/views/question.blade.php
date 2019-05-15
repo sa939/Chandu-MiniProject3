@@ -16,6 +16,7 @@ echo '<link href="style.php" rel="stylesheet">';
                     <div class="card-body">
 
                         {{$question->body}}
+
                     </div>
                     <div class="card-footer">
                         <a class="btn btn-primary float-right"
@@ -33,10 +34,13 @@ echo '<link href="style.php" rel="stylesheet">';
 
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header"><a class="btn btn-primary float-left"
-                                                href="{{ route('answers.create', ['question_id'=> $question->id])}}">
+                    <div class="card-header">
+                        <a class="btn btn-primary float-left"
+                           href="{{ route('answers.create', ['question_id'=> $question->id])}}">
                             Answer Question
-                        </a></div>
+                        </a>
+
+                    </div>
 
 
 
@@ -45,6 +49,7 @@ echo '<link href="style.php" rel="stylesheet">';
                             <div class="card">
                                 <div class="card-body">{{$answer->body}}</div>
                                 <div class="card-footer">
+
 
 
                                     <script>
@@ -59,6 +64,7 @@ echo '<link href="style.php" rel="stylesheet">';
                                         document.addEventListener("DOMContentLoaded", function() {
                                             document.getElementById('subtract').addEventListener('click', function() {
                                                 document.getElementById('votenumber').innerText--;
+
                                             });
                                         });
                                     </script>
@@ -69,18 +75,14 @@ echo '<link href="style.php" rel="stylesheet">';
 
 
 
-                                    <a class="upvote" id='add'
-                                       href="{{ route('votes.update',['id'=> $question->id])}}">
-                                        <span class="glyphicon glyphicon-arrow-up"></span>
-                                    </a>
-
-                                    <p id="votenumber"> 0 </p>
+                                    <div class="upvote" id='add'> <span class="glyphicon glyphicon-arrow-up"></span>
+                                    </div>
+                                    <div id="votenumber">{{$answer->votes}}</div>
 
 
-                                    <a class="downvote" id='subtract'
-                                       href="{{ route('votes.update',['id'=> $question->id])}}">
+                                    <div class="downvote" id='subtract'>
                                         <span class="glyphicon glyphicon-arrow-down"></span>
-                                    </a>
+                                    </div>
 
 
 
@@ -90,8 +92,19 @@ echo '<link href="style.php" rel="stylesheet">';
 
 
 
-                                    <div class="share" >    <span class="glyphicon glyphicon-share-alt"></span> <p> Share </p></div>
+                                    <div class="share" >
+                                        <span class="glyphicon glyphicon-share-alt"></span>
 
+
+
+                                        <a class="share2"
+                                           href="http://facebook.com">
+                                            <p> Share </p>
+
+                                        </a>
+
+
+                                    </div>
 
 
 
@@ -100,10 +113,15 @@ echo '<link href="style.php" rel="stylesheet">';
                                         View
                                     </a>
 
-                                    <a class="btn btn-danger float-right"
+                                    <a class="btn btn-danger float-right" id = "margin-right"
                                        href="{{ route('answers.show', ['question_id'=> $question->id,'answer_id' => $answer->id]) }}">
                                         Report
                                     </a>
+
+
+
+
+
 
                                 </div>
                             </div>
