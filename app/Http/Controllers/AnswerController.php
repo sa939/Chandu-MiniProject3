@@ -110,6 +110,8 @@ class AnswerController extends Controller
 
         $answer = Answer::find($answer);
         $answer->body = $request->body;
+        $answer->votes = $request->votes;
+
         $answer->save();
 
         return redirect()->route('answers.show',['question_id' => $question, 'answer_id' => $answer])->with('message', 'Updated');

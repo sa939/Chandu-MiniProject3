@@ -15,7 +15,8 @@
                         @endif
                         <div class="form-group">
                             {!! Form::label('body', 'Body') !!}
-                            {!! Form::text('body', $answer->body, ['class' => 'form-control','required' => 'required']) !!}
+                            {!! Form::text('body', $answer->body,  ['class' => 'form-control','required' => 'required']) !!}
+
                         </div>
                         <button class="btn btn-success float-right" value="submit" type="submit" id="submit">Save
                         </button>

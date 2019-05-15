@@ -44,6 +44,7 @@ class QuestionController extends Controller
     {
         $input = $request->validate([
             'body' => 'required|min:5',
+
         ], [
             'body.required' => 'Body is required',
             'body.min' => 'Body must be at least 5 characters',
@@ -90,11 +91,13 @@ class QuestionController extends Controller
     {
         $input = $request->validate([
             'body' => 'required|min:5',
+
         ], [
             'body.required' => 'Body is required',
             'body.min' => 'Body must be at least 5 characters',
         ]);
         $question->body = $request->body;
+
         $question->save();
         return redirect()->route('questions.show',['question_id' => $question->id])->with('message', 'Saved');
     }

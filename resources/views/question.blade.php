@@ -65,10 +65,14 @@ echo '<link href="style.php" rel="stylesheet">';
 
 
 
+                                    <a class="btn btn-danger float-right"
+                                       href="{{ route('votes.show', ['id'=> $votes->id]) }}">
+                                        Report
+                                    </a>
                                     <div class="upvote" id='add' > <span class="glyphicon glyphicon-arrow-up"></span> </div>
                                     <p id="votenumber"> 0 </p>
 
-
+                                    {{$answer->id}}
                                     <div class="downvote" id='subtract' >   <span class="glyphicon glyphicon-arrow-down"></span> </div>
 
 
