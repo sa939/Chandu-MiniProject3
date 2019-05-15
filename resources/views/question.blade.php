@@ -66,8 +66,6 @@ echo '<link href="style.php" rel="stylesheet">';
 
 
 
-                                    <div class="upvote" id='add' > <span class="glyphicon glyphicon-arrow-up"></span> </div>
-                                    <p id="votenumber"> 0 </p>
 
 
 
@@ -76,9 +74,15 @@ echo '<link href="style.php" rel="stylesheet">';
                                         <span class="glyphicon glyphicon-arrow-up"></span>
                                     </a>
 
+                                    <p id="votenumber"> 0 </p>
 
-                                    {{$answer->id}}
-                                    <div class="downvote" id='subtract' >   <span class="glyphicon glyphicon-arrow-down"></span> </div>
+
+                                    <a class="downvote" id='subtract'
+                                       href="{{ route('votes.update',['id'=> $question->id])}}">
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </a>
+
+
 
 
 

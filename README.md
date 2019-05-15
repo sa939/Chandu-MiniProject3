@@ -1,8 +1,10 @@
-# Chandu-MiniProject3
+# Chandu-Final
 
-To run miniproject3:
 
-1.) Git Clone 
-2.)CD into miniproject3 and run composer install
-3.)cp .env.example to .env
-4.)setupdb
+I created an epic to be able to manage answers (Epic)
+    
+    - User Stories
+ 1.) User can upvote on an answer
+ 2.) User can downvote on an answer
+ 3.) User can share  an answer
+ 4.) User can report  an answer

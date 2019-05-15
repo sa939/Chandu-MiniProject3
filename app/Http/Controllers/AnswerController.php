@@ -101,7 +101,7 @@ class AnswerController extends Controller
     {
         $input = $request->validate([
             'body' => 'required|min:5',
-            'votes' => '0',
+            'votes' == '0',
 
         ], [
 
@@ -111,8 +111,8 @@ class AnswerController extends Controller
         ]);
 
         $answer = Answer::find($answer);
+
         $answer->body = $request->body;
-        $answer->votes = $request->votes;
 
         $answer->save();
 
