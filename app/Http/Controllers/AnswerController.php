@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Answer;
 use App\Question;
+use App\Votes;
+
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;

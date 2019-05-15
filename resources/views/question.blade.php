@@ -65,15 +65,25 @@ echo '<link href="style.php" rel="stylesheet">';
 
 
 
-                                    <a class="btn btn-danger float-right"
-                                       href="{{ route('votes.show', ['id'=> $votes->id]) }}">
-                                        Report
-                                    </a>
+
                                     <div class="upvote" id='add' > <span class="glyphicon glyphicon-arrow-up"></span> </div>
                                     <p id="votenumber"> 0 </p>
 
+
+
+                                    <a class="upvote" id='add'
+                                       href="{{ route('votes.update',['id'=> $question->id])}}">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                    </a>
+
+
                                     {{$answer->id}}
                                     <div class="downvote" id='subtract' >   <span class="glyphicon glyphicon-arrow-down"></span> </div>
+
+
+
+
+
 
 
                                     <div class="share" >    <span class="glyphicon glyphicon-share-alt"></span> <p> Share </p></div>
