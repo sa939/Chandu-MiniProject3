@@ -47,10 +47,29 @@ echo '<link href="style.php" rel="stylesheet">';
                                 <div class="card-footer">
 
 
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", function() {
+                                            document.getElementById('add').addEventListener('click', function() {
+                                                document.getElementById('votenumber').innerText++;
+                                            });
+                                        });
+                                    </script>
 
-                                    <div class="upvote" > <span class="glyphicon glyphicon-arrow-up"></span> </div>
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", function() {
+                                            document.getElementById('subtract').addEventListener('click', function() {
+                                                document.getElementById('votenumber').innerText--;
+                                            });
+                                        });
+                                    </script>
+
+
+
+                                    <div class="upvote" id='add' > <span class="glyphicon glyphicon-arrow-up"></span> </div>
                                     <p id="votenumber"> 0 </p>
-                                    <div class="downvote" >   <span class="glyphicon glyphicon-arrow-down"></span> </div>
+
+
+                                    <div class="downvote" id='subtract' >   <span class="glyphicon glyphicon-arrow-down"></span> </div>
 
 
                                     <div class="share" >    <span class="glyphicon glyphicon-share-alt"></span> <p> Share </p></div>
@@ -63,6 +82,11 @@ echo '<link href="style.php" rel="stylesheet">';
                                         View
                                     </a>
 
+                                    <a class="btn btn-danger float-right"
+                                       href="{{ route('answers.show', ['question_id'=> $question->id,'answer_id' => $answer->id]) }}">
+                                        Report
+                                    </a>
+
                                 </div>
                             </div>
                         @empty
@@ -71,9 +95,11 @@ echo '<link href="style.php" rel="stylesheet">';
                                 <div class="card-body"> No Answers</div>
                             </div>
                         @endforelse
+                    </div>
 
 
                     </div>
                 </div>
             </div>
 @endsection
+    </div>
