@@ -32,6 +32,11 @@
                             Answer Question
                         </a></div>
 
+                    <div> <p> &#8593;</p>  Upvote</div>
+
+                    <div> <p>&#8595;</p>Downvote </div>
+
+
                     <div class="card-body">
                         @forelse($question->answers as $answer)
                             <div class="card">
