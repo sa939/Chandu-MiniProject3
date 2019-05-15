@@ -48,9 +48,14 @@ echo '<link href="style.php" rel="stylesheet">';
 
 
 
-                                    <div class="upvote" > <span class="glyphicon glyphicon-arrow-up"></span></div>
+                                    <div class="upvote" > <span class="glyphicon glyphicon-arrow-up"></span> </div>
+                                    <p id="votenumber"> 0 </p>
+                                    <div class="downvote" >   <span class="glyphicon glyphicon-arrow-down"></span> </div>
 
-                                    <div class="downvote" >   <span class="glyphicon glyphicon-arrow-down"></span></div>
+
+                                    <div class="share" >    <span class="glyphicon glyphicon-share-alt"></span> <p> Share </p></div>
+
+
 
 
                                     <a class="btn btn-primary float-right"

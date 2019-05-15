@@ -8,8 +8,29 @@
     color: red;
     margin-left: -8px;
     float: left;
-    margin-top: 22px;
+    margin-top: 25px;
     margin-bottom: 7px;
+}
+
+
+#votenumber{
+    position: absolute;
+    /* background-color: white; */
+    margin-top: 12px;
+    margin-left: 2px;
+}
+
+.share{
+    color: #3490dc;
+    margin-left: 58px;
+    float: left;
+    margin-top: 4px;
+    /* margin-bottom: 7px; */
+}
+
+.share p {
+    margin-left: 15px;
+    margin-top: -9px;
 }
 
 
