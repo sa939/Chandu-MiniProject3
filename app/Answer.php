@@ -8,7 +8,7 @@ class Answer extends Model
 {
 
 
-    protected $fillable = ['body'];
+    protected $fillable = ['body', 'votes'];
 
 
 

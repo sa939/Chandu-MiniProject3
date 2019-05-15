@@ -18,7 +18,6 @@ class AnswersTableSeeder extends Seeder
                 $answer = factory(\App\Answer::class)->make();
                 $answer->user()->associate($user);
                 $answer->question()->associate($question);
-
                 $answer->save();
 
             });

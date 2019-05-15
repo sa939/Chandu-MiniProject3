@@ -42,6 +42,8 @@ class AnswerController extends Controller
 
         $input = $request->validate([
             'body' => 'required|min:5',
+            'votes' => '0',
+
         ], [
 
             'body.required' => 'Body is required',
@@ -53,6 +55,7 @@ class AnswerController extends Controller
         $Answer = new Answer($input);
         $Answer->user()->associate(Auth::user());
         $Answer->question()->associate($question);
+
         $Answer->save();
 
         return redirect()->route('questions.show',['question_id' => $question->id])->with('message', 'Saved');
@@ -96,6 +99,8 @@ class AnswerController extends Controller
     {
         $input = $request->validate([
             'body' => 'required|min:5',
+            'votes' => '0',
+
         ], [
 
             'body.required' => 'Body is required',
@@ -110,6 +115,18 @@ class AnswerController extends Controller
         return redirect()->route('answers.show',['question_id' => $question, 'answer_id' => $answer])->with('message', 'Updated');
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Remove the specified resource from storage.
