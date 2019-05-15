@@ -29,6 +29,7 @@ class AnswerController extends Controller
     public function create($question)
     {
         $answer = new Answer;
+
         $edit = FALSE;
         return view('answerForm', ['answer' => $answer,'edit' => $edit, 'question' =>$question  ]);
     }
@@ -44,7 +45,7 @@ class AnswerController extends Controller
 
         $input = $request->validate([
             'body' => 'required|min:5',
-            'votes' => '0',
+            'votes' => "required|numeric|between:0,0",
 
         ], [
 
@@ -97,7 +98,7 @@ class AnswerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $question, $answer)
+    public function update(Request $request, $question, $answer, $votes)
     {
         $input = $request->validate([
             'body' => 'required|min:5',
@@ -111,8 +112,8 @@ class AnswerController extends Controller
         ]);
 
         $answer = Answer::find($answer);
-
         $answer->body = $request->body;
+        $answer->votes = $request->votes;
 
         $answer->save();
 

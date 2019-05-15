@@ -20,9 +20,7 @@ class Answer extends Model
         return $this->belongsTo('App\Question');
     }
 
-    public function votes(){
-        return $this->belongsTo('App\Votes');
-    }
+  
 }
 
 

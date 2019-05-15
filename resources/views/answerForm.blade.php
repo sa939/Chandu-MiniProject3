@@ -16,6 +16,7 @@
                         <div class="form-group">
                             {!! Form::label('body', 'Body') !!}
                             {!! Form::text('body', $answer->body,  ['class' => 'form-control','required' => 'required']) !!}
+                            {!! Form::label('votes', 'Votes') !!}
                             {!! Form::text('votes', $answer->votes,  ['class' => 'form-control','required' => 'required']) !!}
 
                         </div>
