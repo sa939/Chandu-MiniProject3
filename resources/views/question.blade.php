@@ -1,4 +1,10 @@
 @extends('layouts.app')
+<?php
+echo '<link href="style.php" rel="stylesheet">';
+?>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
 
 @section('content')
     <div class="container">
@@ -32,9 +38,6 @@
                             Answer Question
                         </a></div>
 
-                    <div> <p> &#8593;</p>  Upvote</div>
-
-                    <div> <p>&#8595;</p>Downvote </div>
 
 
                     <div class="card-body">
@@ -42,6 +45,13 @@
                             <div class="card">
                                 <div class="card-body">{{$answer->body}}</div>
                                 <div class="card-footer">
+
+
+
+                                    <div class="upvote" > <span class="glyphicon glyphicon-arrow-up"></span></div>
+
+                                    <div class="downvote" >   <span class="glyphicon glyphicon-arrow-down"></span></div>
+
 
                                     <a class="btn btn-primary float-right"
                                        href="{{ route('answers.show', ['question_id'=> $question->id,'answer_id' => $answer->id]) }}">
