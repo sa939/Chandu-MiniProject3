@@ -77,8 +77,6 @@ echo '<link href="style.php" rel="stylesheet">';
 
                                     <div class="upvote" id='add'> <span class="glyphicon glyphicon-arrow-up"></span>
                                     </div>
-
-
                                     <div id="votenumber">{{$answer->votes}}</div>
 
 
