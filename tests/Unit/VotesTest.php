@@ -18,7 +18,7 @@ class VotesTest extends TestCase
 
         $user = $user = factory(\App\User::class)->make();
         $user->save();
-        $votes = factory(\App\Votes::class)->make();
-        $votes->user()->associate($user);
-        $this->assertTrue($votes->save());    }
+        $question = factory(\App\Question::class)->make();
+        $question->user()->associate($user);
+        $this->assertTrue($question->save());    }
 }
