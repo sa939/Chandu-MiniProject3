@@ -102,7 +102,6 @@ class AnswerController extends Controller
     {
         $input = $request->validate([
             'body' => 'required|min:5',
-            'votes' == '0',
 
         ], [
 
