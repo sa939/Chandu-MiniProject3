@@ -98,7 +98,7 @@ class AnswerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $question, $answer, $votes)
+    public function update(Request $request, $question, $answer)
     {
         $input = $request->validate([
             'body' => 'required|min:5',
